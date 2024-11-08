@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <h1 class="text-center">Cadastro de Tarefas</h1>
+    <form class="form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Gravar</button>
+    </form>
+{% endblock %}

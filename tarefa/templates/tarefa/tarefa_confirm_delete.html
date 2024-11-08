@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <form class="form" method="POST">
+        {% csrf_token %}
+        <h4>Apagar Tarefa</h4>
+        <p>
+            Você tem certeza que deseja deletar {{ object.descricao }}?
+        </p>
+
+        <p>
+            <a href="{% url 'tarefa_list' %}" class="btn btn-primary">Não</a>
+            <button type="submit" class="btn btn-danger">Sim</button>
+        </p>
+    </form>
+
+{% endblock %}
